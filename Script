@@ -15,8 +15,11 @@ msg = msg:lower()
             cmd = string.sub(msg,2)
         end 
         if cmd == 'bring' then
-        -- [[Script]] -- 
-        print("Brought")
-        end
+    for i, v in pairs(AltUsernames) do
+    if LocalPlayer.Name == v then
+    LocalPlayer.Character.PrimaryPart.CFrame = workspace:FindFirstChild(Username).PrimaryPart.CFrame
     end
+    end
+        end
+        end
 end)
